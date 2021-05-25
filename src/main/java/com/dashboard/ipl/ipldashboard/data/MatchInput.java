@@ -14,7 +14,7 @@ public class MatchInput {
     private String toss_decision;
     private String winner;
     private String result;
-    private String resultMargin;
+    private String result_margin;
     private String eliminator;
     private String method;
     private String umpire1;
@@ -116,11 +116,11 @@ public class MatchInput {
         this.result = result;
     }
 
-    public String getResultMargin() {
+    public String getResult_margin() {
         return result_margin;
     }
 
-    public void setResultMargin(String result_margin) {
+    public void setResult_margin(String result_margin) {
         this.result_margin = result_margin;
     }
 
