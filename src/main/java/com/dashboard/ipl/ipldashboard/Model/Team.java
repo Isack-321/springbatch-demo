@@ -1,25 +1,40 @@
 package com.dashboard.ipl.ipldashboard.Model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Team {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-   private long id; 
-   private String teamName;
-   private Long totalMatches;
-   private Long totalWins;
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    private String teamName;
+    private Long totalMatches;
+    private Long totalWins;
+    @Transient
+    private List<Match> matches;
 
     public Team(String teamName, Long totalMatches) {
-    this.teamName = teamName;
-    this.totalMatches = totalMatches;
-}
+        this.teamName = teamName;
+        this.totalMatches = totalMatches;
+    }
+
+    public Team() {
+    }
+
+    public List<Match> getMatches() {
+        return matches;
+    }
+
+    public void setMatches(List<Match> matches) {
+        this.matches = matches;
+    }
 
     /**
      * @return long return the id
@@ -57,7 +72,7 @@ public class Team {
     }
 
     /**
-     * @param totalMatches the totalMatches to set
+     * @param list the totalMatches to set
      */
     public void setTotalMatches(Long totalMatches) {
         this.totalMatches = totalMatches;
@@ -77,9 +92,4 @@ public class Team {
         this.totalWins = totalWins;
     }
 
-    @Override
-    public String toString() {
-        return "Team [teamName=" + teamName + ", totalMatches=" + totalMatches + ", totalWins=" + totalWins + "]";
-    }
-    
 }
