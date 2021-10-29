@@ -31,4 +31,4 @@ build/
 ### VS Code ###
 .vscode/
 ### React App ###
-src/fontend/node_modules/
+src/fontend/ipldash/node_modules/
