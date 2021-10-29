@@ -1,7 +1,7 @@
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
+/src/fontend/ipldash/node_modules/
 !**/src/test/**/target/
 
 ### STS ###
